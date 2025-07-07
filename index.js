@@ -22,6 +22,10 @@ const url = "https://apidb.dvago.pk/AppAPIV3/GetProductBannersBySlugV1&Slug=AppH
 const myApi = "/myApi"
 const url1 = "https://backend.qistbazaar.pk/api//products-categories-minimal"
 
+app.get('/', (req, res) => {
+  res.redirect('/myApi');
+});
+
 app.get(myApi, async(req, res) => {
   const response = await axios.get(url1);
   res.json({
